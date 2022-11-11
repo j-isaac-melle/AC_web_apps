@@ -3,4 +3,4 @@
 #dont run anything past while troubleshooting:
 import streamlit
 
-streamlit.title('Air canada Webpage')
+streamlit.title('Air Canada Webpage')
