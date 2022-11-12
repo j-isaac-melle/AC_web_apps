@@ -2,6 +2,7 @@
      
 #dont run anything past while troubleshooting:
 import streamlit
+import snowflake.connector
 
 streamlit.title('Air Canada Webpage')
 
@@ -14,9 +15,9 @@ streamlit.header('Chck out our users:')
 
 #streamlit.multiselect(
 
-import snowflake.connector
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_row = my_cur.fetchone()
