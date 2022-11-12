@@ -25,6 +25,6 @@ my_cur = my_cnx.cursor()
 
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
 myresult = my_cur.fetchall()
-streamlit.multiselect("Pick a user: ", list(myresult.index))
+streamlit.multiselect("Pick a user: ", list(my_cur.index))
 streamlit.dataframe(myresult)
 
