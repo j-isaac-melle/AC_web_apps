@@ -19,5 +19,5 @@ streamlit.header('Chck out our users:')
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
+my_cur.execute("SELECT * FROM USERS")
 streamlit.text(my_data_row)
