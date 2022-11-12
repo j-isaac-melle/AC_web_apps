@@ -20,8 +20,11 @@ streamlit.header('Check out our users:')
 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
+
 my_cur = my_cnx.cursor()
 
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
+streamlit.multiselect("Pick a user: ", list(my_cur.index))
 myresult = my_cur.fetchall()
 streamlit.dataframe(myresult)
+
