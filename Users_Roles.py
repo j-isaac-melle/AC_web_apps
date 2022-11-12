@@ -23,9 +23,8 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
-myresult = mycur.fetchall()
+myresult = my_cur.fetchall()
 streamlit.text(myresult)
-
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
