@@ -12,7 +12,7 @@ streamlit.text('USER: An identiy recognized by Snowflake, associated to Person o
 streamlit.text('ROLE: An entity to which privileges can be granted.')
 streamlit.text('\tRoles are assigned to users.')
 streamlit.text('\tRoles may also be assigned to other roles, creating a role hierarchy.')
-streamlit.header('Chck out our users:')
+streamlit.header('Check out our users:')
 
 #streamlit.multiselect(
 
