@@ -24,8 +24,8 @@ my_cur = my_cnx.cursor()
 
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
 myresult = mycur.fetchall()
-for x in myresult:
-  print(x)
+streamlit.text(myresult)
+
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
