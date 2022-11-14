@@ -28,3 +28,5 @@ myresult = my_cur.fetchall()
 #streamlit.multiselect("Pick a user: ", list(my_cur.index))
 streamlit.dataframe(myresult)
 
+
+streamlit.header('Check out our Roles:')
