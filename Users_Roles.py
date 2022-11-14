@@ -30,3 +30,9 @@ streamlit.dataframe(myresult)
 
 
 streamlit.header('Check out our Roles:')
+my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.OUR_ROLES")
+myresult = my_cur.fetchall()
+#streamlit.multiselect("Pick a user: ", list(my_cur.index))
+streamlit.dataframe(myresult)
+
+
