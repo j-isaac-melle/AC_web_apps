@@ -26,7 +26,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.USERS")
 myresult = my_cur.fetchall()
 
-my_cur = my_cur.set_index('Name')
+#my_cur = my_cur.set_index('Name')
 #pick select list here for smothie creation: (list from index index declared)
 #manually adds avo and bana to list 
 #fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
@@ -35,10 +35,10 @@ my_cur = my_cur.set_index('Name')
 streamlit.dataframe(myresult)
 
 
-streamlit.header('Check out our Roles:')
-my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.OUR_ROLES")
-myresult = my_cur.fetchall()
+#streamlit.header('Check out our Roles:')
+#my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.OUR_ROLES")
+#myresult = my_cur.fetchall()
 #streamlit.multiselect("Pick a user: ", list(my_cur.index))
-streamlit.dataframe(myresult)
+#streamlit.dataframe(myresult)
 
 
